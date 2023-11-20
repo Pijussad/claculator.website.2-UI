@@ -1,0 +1,80 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#video-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+#calculator {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+
+input[type="text"], button {
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+input[type="text"] {
+    width: calc(100% - 10px); /* Adjust width for consistency with buttons */
+    padding: 10px;
+    font-size: 20px; /* Slightly larger font for input fields */
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px; /* Reduced margin for input fields */
+    outline: none;
+    box-sizing: border-box;
+    text-align: right;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#special-buttons button {
+    background-color: #f0ad4e;
+}
+
+#special-buttons button:hover {
+    background-color: #ec971f;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens */
+    #calculator {
+        width: 80%;
+    }
+}

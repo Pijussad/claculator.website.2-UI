@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <video autoplay loop id="video-bg">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="calculator">
+
+        <h2>Nice Calculator</h2>
+
+        <input type="text" id="previousEntry" disabled>
+        <input type="text" id="currentEntry" disabled>
+
+        <div class="buttons-grid">
+            <!-- Number buttons -->
+            <div class="buttons-row">
+                <button onclick="buttonClicked('1')">1</button>
+                <button onclick="buttonClicked('2')">2</button>
+                <button onclick="buttonClicked('3')">3</button>
+                <button onclick="buttonClicked('+')">+</button>
+            </div>
+
+            <div class="buttons-row">
+                <button onclick="buttonClicked('4')">4</button>
+                <button onclick="buttonClicked('5')">5</button>
+                <button onclick="buttonClicked('6')">6</button>
+                <button onclick="buttonClicked('-')">-</button>
+            </div>
+
+            <div class="buttons-row">
+                <button onclick="buttonClicked('7')">7</button>
+                <button onclick="buttonClicked('8')">8</button>
+                <button onclick="buttonClicked('9')">9</button>
+                <button onclick="buttonClicked('*')">*</button>
+            </div>
+
+            <div class="buttons-row">
+                <button onclick="buttonClicked('0')">0</button>
+                <button onclick="clearResult()">C</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="buttonClicked('/')">/</button>
+            </div>
+
+            <!-- Additional buttons -->
+            <div id="special-buttons">
+                <button onclick="calculatePercentage()">%</button>
+                <button onclick="calculateFactorial()">!</button>
+		<button onclick="buttonClicked('^2')">x²</button>
+                <button onclick="buttonClicked('√')">√</button>
+            </div>
+
+            <div id="special-buttons">
+                <button onclick="buttonClicked('^')">^</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="calculator.js"></script>
+
+</body>
+</html>
