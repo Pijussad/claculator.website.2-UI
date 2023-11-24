@@ -31,14 +31,19 @@ body {
     padding: 20px;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 15px;
-    font-size: 24px;
-    border: none;
-    border-bottom: 2px solid #ddd;
+input[type="text"], button {
+    font-size: 18px;
+    margin: 5px;
     border-radius: 4px;
-    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+input[type="text"] {
+    width: calc(100% - 10px); /* Adjust width for consistency with buttons */
+    padding: 10px;
+    font-size: 20px; /* Slightly larger font for input fields */
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px; /* Reduced margin for input fields */
     outline: none;
     box-sizing: border-box;
     text-align: right;
@@ -49,14 +54,10 @@ input[type="text"] {
 button {
     width: 50px;
     height: 50px;
-    font-size: 18px;
-    margin: 5px;
     cursor: pointer;
     background-color: #5cb85c;
     color: #fff;
     border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
 }
 
 button:hover {
